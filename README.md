@@ -7,6 +7,48 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# EcoRecolect 2025
+
+EcoRecolect 2025 es un prototipo universitario desarrollado en Laravel 11.  
+El sistema busca gestionar de manera eficiente la recolección de residuos, promoviendo la sostenibilidad y el cuidado del medio ambiente.
+
+## Cómo correr el proyecto en Local
+
+### Requisitos previos
+- XAMPP (Apache + MySQL).
+- Composer
+- Node.js
+- Git
+- PHP >= 8.1
+
+### Instalaión
+1. Clona el repositorio
+
+git clone https://github.com/JhoanRengi/EcoRecolect_2025.git
+cd EcoRecolect_2025
+
+2. Instala dependencias:
+
+composer install
+npm install
+npm run build
+
+3. Copia .env.example a .env
+
+4. Genera la key:
+
+php artisan key:generate
+
+5. Crea la base de datos eco_recolect en phpMyAdmin
+
+6. Correr las migraciones
+
+php artisan migrate
+
+7. levanta el servidor
+
+php artisan serve
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
