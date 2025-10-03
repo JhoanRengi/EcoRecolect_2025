@@ -9,7 +9,7 @@
 
 # EcoRecolect 2025
 
-EcoRecolect es un prototipo universitario desarrollado en Laravel 11.  
+EcoRecolect es un prototipo universitario desarrollado en Laravel V12.  
 El sistema busca gestionar de manera eficiente la recolección de residuos, promoviendo la sostenibilidad y el cuidado del medio ambiente.
 
 ## Cómo correr el proyecto en Local
@@ -23,42 +23,72 @@ Es importante descargar:
 - Git: https://git-scm.com/
 - PHP >= 8.1 : https://www.php.net/downloads.php
 
-### Instalaión
-1. Clona el repositorio para Windows
-
-
-- Desde Git Bash
+### Clonado del Repositorio
+1. Primero crear la carpeta dónde se va a clonar el Repositorio.
+2. Desde Git Bash acceder la carpeta que creaste para clonar el Repositorio.
 
 ```bash
-cd /c/Users/TU_USUARIO/Documents
+cd /c/Users/TU_USUARIO/RUTA_CARPETA
+```
+3. Después clona el repositorio mediante Git Bash:
+
+```bash
+git clone https://github.com/JhoanRengi/EcoRecolect_2025.git
+```
+NOTA: Ya podrás ver los documentos clonados.
+
+### Instalacón dependencias
+
+Abre Visual Studio Code, luego una terminal.
+
+1. Ejecuta la instalación de dependencias de php:
+
+```bash
+composer install
+```
+> [!NOTA:]
+>  Si es la primera vez ejecutando composer, se debe habilitar _<ins>;extension=zip</ins>_ en el archivo de _<ins>C:\xampp\php\php.ini</ins>_ y elininal solamente el _<ins>;</ins>_.
+
+2. Instala los paquetes de Node.js:
+
+```bash
+npm install
+```
+Luego ejecuta el escript
+
+```bash
+npm run build
+```
+> [!NOTA:]
+> Aunque estén creadas las variables de entorno, y no permite ejecutar estos comandos. Se debe porque PowerShell bloquea la ejecución de scripts .ps1 por temas de seguridad. Como PowerShell tiene la política de ejecución en "Restricted", arroja ese error.
+> Ejecutar PowerShell como Administrador y ejecutar el comando _<ins>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</ins>_ y luego confirma su ejecución (en Si o Yes). 
+
+### Configurar .env.example
+
+1. Configurar el .env para las Credenciales privadas.
+
+### Genera la key
+
+1. Desde la terminal ejecutar el comando:
+
+```bash
+php artisan key:generate
+```
+### Confiura la base de datos:
+
+1. Crea la base de datos en phpMyAdmin
+
+2. Correr las migraciones 
+
+```bash
+php artisan migrate
 ```
 
-git clone https://github.com/JhoanRengi/EcoRecolect_2025.git
+3. Finalmente levanta el servidor
 
-
-cd EcoRecolect_2025
-
-2. Instala dependencias:
-
-composer install
-    npm install
-    npm run build
-
-3. Copia .env.example a .env
-
-4. Genera la key:
-
-php artisan key:generate
-
-5. Crea la base de datos eco_recolect en phpMyAdmin
-
-6. Correr las migraciones
-
-php artisan migrate
-
-7. levanta el servidor
-
+```bash
 php artisan serve
+```
 
 ## About Laravel
 
