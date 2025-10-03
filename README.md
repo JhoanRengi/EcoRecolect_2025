@@ -9,29 +9,40 @@
 
 # EcoRecolect 2025
 
-EcoRecolect 2025 es un prototipo universitario desarrollado en Laravel 11.  
+EcoRecolect es un prototipo universitario desarrollado en Laravel 11.  
 El sistema busca gestionar de manera eficiente la recolección de residuos, promoviendo la sostenibilidad y el cuidado del medio ambiente.
 
 ## Cómo correr el proyecto en Local
 
 ### Requisitos previos
-- XAMPP (Apache + MySQL).
-- Composer
-- Node.js
-- Git
-- PHP >= 8.1
+
+Es importante descargar: 
+- XAMPP (Apache + MySQL): https://www.apachefriends.org/es/index.html
+- Composer: https://getcomposer.org/
+- Node.js: https://nodejs.org/en
+- Git: https://git-scm.com/
+- PHP >= 8.1 : https://www.php.net/downloads.php
 
 ### Instalaión
-1. Clona el repositorio
+1. Clona el repositorio para Windows
+
+
+- Desde Git Bash
+
+```bash
+cd /c/Users/TU_USUARIO/Documents
+```
 
 git clone https://github.com/JhoanRengi/EcoRecolect_2025.git
+
+
 cd EcoRecolect_2025
 
 2. Instala dependencias:
 
 composer install
-npm install
-npm run build
+    npm install
+    npm run build
 
 3. Copia .env.example a .env
 
