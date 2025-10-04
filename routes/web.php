@@ -1,26 +1,28 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\ClientRegistrationController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/inicio', function () {
-    return view('inicio');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/suma', function () {
-    return view('suma');
-});
 
-Route::post('/suma', function (Request $request) {
+Route::get('/register/cliente', [ClientRegistrationController::class, 'create'])
+    ->name('register.cliente');
 
-    $num1 = $request->input('num1');
-    $num2 = $request->input('num2');
-    $suma = $num1 + $num2;
 
-    RETURN view('suma', ['suma' => $suma]);
-});
+require __DIR__.'/auth.php';
+
 
