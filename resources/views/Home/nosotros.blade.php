@@ -34,7 +34,7 @@
                 
                 {{-- Imagen o Carrusel del Equipo Fundador/Evolución --}}
                 <div class="col-lg-5 mb-4">
-                    <img src="{{ asset('img/equipo_fundador.jpg') }}" class="img-fluid rounded-3 shadow-lg" alt="Equipo fundador y proceso de reciclaje de EcoRecolect">
+                    <img src="{{ asset('images/equipo_fundador.jpg') }}" class="img-fluid rounded-3 shadow-lg" alt="Equipo fundador y proceso de reciclaje de EcoRecolect">
                 </div>
 
             </div>

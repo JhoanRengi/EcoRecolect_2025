@@ -20,15 +20,17 @@
                 <p class="mb-5 fs-5">Un servicio de recolección de residuos domésticos que va más allá, reduciendo la huella en los rellenos sanitarios y recompensando tu compromiso.</p>
                 
                 {{-- Botón Estilizado SIN Enlace de Laravel --}}
-                <button type="button" class="btn btn-dark btn-lg px-4 py-3 shadow-lg custom-btn-radius">
+                <button
+                    onclick="window.location='{{ route('register') }}'"
+                    class="btn btn-dark btn-lg px-4 py-3 shadow-lg custom-btn-radius">
                     ¡Regístrate Hoy!
-                </button>
+                    </button>
             </div>
         </div>
     </div>
 </div>
 
-    {{-- Opcional: El logotipo debe ir en la barra de navegación (navbar) --}}
+    
 
 </div>
 
@@ -43,7 +45,7 @@
             <div class="card shadow-sm border-0 rounded-3 overflow-hidden w-100">
                 
                 {{-- Imagen que se ajusta --}}
-                <img src="{{ asset('img/recoleccion_especializada.png') }}" class="card-img-top" alt="Recolección Especializada">
+                <img src="{{ asset('images/recoleccion_especializada.png') }}" class="card-img-top" alt="Recolección Especializada">
                 
                 <div class="card-body p-3 bg-white">
                     <h5 class="card-title fw-bold">RECOLECCIÓN ESPECIALIZADA</h5>
@@ -56,7 +58,7 @@
 
         <div class="col-12 col-md-6 col-lg-3 d-flex mb-4">
             <div class="card shadow-sm border-0 rounded-3 overflow-hidden w-100">
-                <img src="{{ asset('img/impacto_real.png') }}" class="card-img-top" alt="Impacto Real">
+                <img src="{{ asset('images/impacto_real.png') }}" class="card-img-top" alt="Impacto Real">
                 <div class="card-body p-3 bg-white">
                     <h5 class="card-title fw-bold">IMPACTO REAL</h5>
                     <p class="card-text small">
@@ -68,7 +70,7 @@
         
         <div class="col-12 col-md-6 col-lg-3 d-flex mb-4">
             <div class="card shadow-sm border-0 rounded-3 overflow-hidden w-100">
-                <img src="{{ asset('img/a_la_mano.png') }}" class="card-img-top" alt="A la Mano">
+                <img src="{{ asset('images/a_la_mano.png') }}" class="card-img-top" alt="A la Mano">
                 <div class="card-body p-3 bg-white">
                     <h5 class="card-title fw-bold">A LA MANO</h5>
                     <p class="card-text small">
@@ -80,7 +82,7 @@
         
         <div class="col-12 col-md-6 col-lg-3 d-flex mb-4">
             <div class="card shadow-sm border-0 rounded-3 overflow-hidden w-100">
-                <img src="{{ asset('img/recompensa.png') }}" class="card-img-top" alt="Recompensa">
+                <img src="{{ asset('images/recompensa.png') }}" class="card-img-top" alt="Recompensa">
                 <div class="card-body p-3 bg-white">
                     <h5 class="card-title fw-bold">RECOMPENSA</h5>
                     <p class="card-text small">
@@ -200,7 +202,7 @@
                     {{-- Contenedor del Collage de Imágenes (Fondo o Múltiples <img>) --}}
                     <div class="collage-organicos">
                         {{-- NOTA: Lo más limpio es usar una imagen que ya sea el collage --}}
-                        <img src="{{ asset('img/collage_organicos.jpg') }}" class="img-fluid" alt="Imágenes de residuos orgánicos y compostaje">
+                        <img src="{{ asset('images/collage_organicos.jpg') }}" class="img-fluid" alt="Imágenes de residuos orgánicos y compostaje">
                     </div>
                     
                     {{-- Título Oscuro --}}
@@ -223,7 +225,7 @@
                 <div class="residuo-card rounded-3 overflow-hidden shadow-sm">
                     
                     <div class="collage-inorganicos">
-                        <img src="{{ asset('img/collage_inorganicos.jpg') }}" class="img-fluid" alt="Imágenes de residuos inorgánicos y reciclaje">
+                        <img src="{{ asset('images/collage_inorganicos.jpg') }}" class="img-fluid" alt="Imágenes de residuos inorgánicos y reciclaje">
                     </div>
                     
                     <div class="bg-dark text-white py-2 px-3">
@@ -244,7 +246,7 @@
                 <div class="residuo-card rounded-3 overflow-hidden shadow-sm">
                     
                     <div class="collage-peligrosos">
-                        <img src="{{ asset('img/collage_peligrosos.jpg') }}" class="img-fluid" alt="Imágenes de residuos peligrosos y manejo experto">
+                        <img src="{{ asset('images/collage_peligrosos.jpg') }}" class="img-fluid" alt="Imágenes de residuos peligrosos y manejo experto">
                     </div>
                     
                     <div class="bg-dark text-white py-2 px-3">

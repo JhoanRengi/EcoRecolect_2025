@@ -1,11 +1,9 @@
-/* public/css/custom.css */
-
 .hero-section {
     /* Define la altura mínima para que la imagen se vea bien */
     min-height: 85vh; 
     
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
-                url('../img/landing_page_transformando_residuos.jpg') no-repeat center center/cover;
+                url('../images/landing_page_transformando_residuos.jpg') no-repeat center center/cover;
     
     /* Asegura que la imagen de fondo ocupe todo el contenedor */
     background-size: cover;
@@ -41,7 +39,7 @@
     min-height: 800px; 
     
     /* Imagen de fondo (ajusta la URL si es necesario) */
-    background: url('../img/como_funciona_background.jpg') no-repeat center center/cover;
+    background: url('../images/como_funciona_background.jpg') no-repeat center center/cover;
     background-size: cover;
     background-position: center;
     position: relative; /* Clave para posicionar el título flotante */
@@ -78,7 +76,7 @@
     min-height: 700px; 
     
     /* 1. Imagen de fondo del mapa (Ajusta la URL si es necesario) */
-    background: url('../img/mapa_mundial_gris.jpg') no-repeat center center; 
+    background: url('../images/mapa_mundial_gris.jpg') no-repeat center center; 
     
     /* 2. Asegura que el mapa se muestre por completo y sin repetición */
     background-size: contain;
