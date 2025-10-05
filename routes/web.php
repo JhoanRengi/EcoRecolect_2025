@@ -2,25 +2,36 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\SumaController;
+use App\Http\Controllers\ProductoController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.landing_page');
 });
 
-Route::get('/inicio', function () {
-    return view('inicio');
+Route::get('/nosotros', function () {
+    return view('home.nosotros');
 });
 
+Route::get('/planes', function () {
+    return view('home.planes');
+});
+
+Route::get('/contacto', function () {
+    return view('home.contacto');
+});
+
+/* 
 Route::get('/suma', function () {
     return view('suma');
 });
+ */
 
-Route::post('/suma', function (Request $request) {
+Route::post('/contacto', [ContactoController::class, 'store']);
 
-    $num1 = $request->input('num1');
-    $num2 = $request->input('num2');
-    $suma = $num1 + $num2;
+Route::get('/suma',[SumaController::class, 'index']);
 
-    RETURN view('suma', ['suma' => $suma]);
-});
+Route::post('/suma', [SumaController::class, 'suma']);
 
+Route::get('/productos', [ProductoController::class, 'index']);

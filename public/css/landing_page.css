@@ -1,0 +1,149 @@
+/* public/css/custom.css */
+
+.hero-section {
+    /* Define la altura mínima para que la imagen se vea bien */
+    min-height: 85vh; 
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                url('../img/landing_page_transformando_residuos.jpg') no-repeat center center/cover;
+    
+    /* Asegura que la imagen de fondo ocupe todo el contenedor */
+    background-size: cover;
+    background-position: center;
+    
+    /* Fuerza que el texto sea blanco y evita que se salga del contenedor */
+    color: white; 
+    overflow: hidden;
+}
+
+/* Estilo para el botón (opcional) */
+.custom-btn-radius {
+    border-radius: 0.5rem; /* Ajusta el radio si quieres bordes redondeados */
+}
+
+/* Estilos para el texto grande */
+.hero-section h1 {
+    font-size: 4.5rem; /* Tamaño de fuente para el título principal */
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para resaltar el texto */
+}
+
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 3rem; /* Reduce el tamaño en tablets */
+    }
+}
+
+/* public/css/custom.css */
+
+.como-funciona-section {
+    /* Altura mínima para que la imagen se vea bien */
+    min-height: 800px; 
+    
+    /* Imagen de fondo (ajusta la URL si es necesario) */
+    background: url('../img/como_funciona_background.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Clave para posicionar el título flotante */
+    overflow: hidden;
+}
+
+/* Estilo para el recuadro verde de los pasos (Paso 1, Paso 2, etc.) */
+.paso-box {
+    /* Color de fondo verde con transparencia (rgba) para que se vea el fondo */
+    background-color: rgba(0, 166, 62, 0.85); /* #00a63e con 85% opacidad */
+    border: 2px solid #00a63e; /* Borde verde fuerte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s;
+}
+
+.paso-box:hover {
+    transform: translateY(-3px); /* Pequeño efecto al pasar el mouse */
+}
+
+/* Estilo para el título verde flotante ("¿Cómo funciona?") */
+.floating-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00a63e; /* Verde fuerte */
+    z-index: 20; /* Asegura que esté por encima de todo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Puedes usar una clase de Bootstrap como .shadow-lg en lugar de box-shadow */
+}
+
+/* Estilos para la sección completa del mapa */
+.compromiso-section {
+    /* Altura mínima para que el mapa se vea bien */
+    min-height: 700px; 
+    
+    /* 1. Imagen de fondo del mapa (Ajusta la URL si es necesario) */
+    background: url('../img/mapa_mundial_gris.jpg') no-repeat center center; 
+    
+    /* 2. Asegura que el mapa se muestre por completo y sin repetición */
+    background-size: contain;
+    background-position: no-repeat;
+    position: relative;
+    color: #333; /* Color de texto base */
+}
+
+/* Estilo para el título verde redondeado */
+.compromiso-title {
+    background-color: #00a63e; /* El verde que estás usando */
+    z-index: 10;
+    position: relative; /* Para asegurar que esté por encima del mapa */
+}
+
+/* Estilo para los recuadros de Beneficios */
+.beneficios-box {
+    /* Ancho máximo para que no ocupe todo el espacio en pantallas grandes */
+    max-width: 450px; 
+    
+    /* Fondo semi-transparente blanco para legibilidad sobre el mapa */
+    background-color: rgba(255, 255, 255, 0.85); 
+    
+    /* Borde verde del color principal */
+    border-color: #00a63e !important;
+    
+    /* Sombra opcional */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    
+    /* Puedes usar la clase 'rounded-3' de Bootstrap para las esquinas */
+}
+
+/* Estilo para la lista de bullets (para que se parezca más al diseño) */
+.list-unstyled li {
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+}
+
+.list-unstyled li::before {
+    content: "•"; /* Usa un punto como viñeta */
+    color: #00a63e; /* Color verde para la viñeta */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.5rem;
+}
+
+
+
+
+/* Contenedor de cada módulo */
+.residuo-card {
+    /* Asegura que los bordes redondeados cubran toda la tarjeta */
+    border: 1px solid #ddd;
+}
+
+/* Estilo para el recuadro de descripción verde */
+.descripcion-box-verde {
+    background-color: #00a63e; /* Verde fuerte */
+    border-radius: 0 0 0.3rem 0.3rem; /* Esquinas inferiores redondeadas */
+    /* El p-3 de Bootstrap le da el padding */
+}
+
+/* Estilos para los títulos principales (para que coincidan con el verde) */
+.text-success {
+    color: #00a63e !important; 
+}
