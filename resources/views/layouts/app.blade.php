@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-  @vite(['resources/css/app.css','resources/js/app.js'])
+    @vite(['resources/css/app.css','resources/js/app.js'])
 
 </head>
 <body>
@@ -23,30 +23,30 @@
                 <li class="nav-item"><a href="/nosotros" class="nav-link">Nosotros</a></li>
                 <li class="nav-item"><a href="/planes" class="nav-link">Planes</a></li>
                 <li class="nav-item"><a href="/contacto" class="nav-link">Contacto</a></li>
-                 @auth
-          @if(auth()->user()->user_type === 'admin')
+                @auth
+            @if(auth()->user()->user_type === 'admin')
             <li class="nav-item"><a href="{{ route('admin.dashboard') }}" class="nav-link">Admin</a></li>
-          @endif
-          <li class="nav-item">
+            @endif
+            <li class="nav-item">
             <form method="POST" action="{{ route('logout') }}">
-              @csrf
-              <button class="btn btn-link nav-link p-0">Cerrar sesión</button>
+                @csrf
+                <button class="btn btn-link nav-link p-0">Cerrar sesión</button>
             </form>
-          </li>
-          @else
-          <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Iniciar sesión</a></li>
-          
+            </li>
+            @else
+            <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Iniciar sesión</a></li>
+        
         @endauth
             </ul>
         </div>
     </nav>
 
-   <main class="container-fluid p-0">
-  @if (isset($slot))
-    {{ $slot }}             {{-- funciona cuando usas <x-app-layout> --}}
-  @else
-    @yield('content')       {{-- funciona cuando usas @extends('layouts.app') --}}
-  @endif
+    <main class="container-fluid p-0">
+    @if (isset($slot))
+        {{ $slot }}             {{-- funciona cuando usas <x-app-layout> --}}
+    @else
+        @yield('content')       {{-- funciona cuando usas @extends('layouts.app') --}}
+    @endif
 </main>
 
     {{-- Footer --}}

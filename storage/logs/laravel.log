@@ -6011,3 +6011,13 @@
 #79 /Users/carlo/Desktop/Programming Path 2025/Full-Stack Folder/EcoRecolect/EcoRecolect_2025/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('/Users/carlo/De...')
 #80 {main}
 "} 
+[2025-10-05 17:36:42] local.ERROR: Class "Laravel\Breeze\BreezeServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Laravel\\Breeze\\BreezeServiceProvider\" not found at C:\\Users\\DevJhoan\\Documents\\Code_2024\\Universidad\\EcoRecolect_2025\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:1034)
+[stacktrace]
+#0 C:\\Users\\DevJhoan\\Documents\\Code_2024\\Universidad\\EcoRecolect_2025\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1014): Illuminate\\Foundation\\Application->registerDeferredProvider('Laravel\\\\Breeze\\\\...', 'Laravel\\\\Breeze\\\\...')
+#1 C:\\Users\\DevJhoan\\Documents\\Code_2024\\Universidad\\EcoRecolect_2025\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(990): Illuminate\\Foundation\\Application->loadDeferredProvider('Laravel\\\\Breeze\\\\...')
+#2 C:\\Users\\DevJhoan\\Documents\\Code_2024\\Universidad\\EcoRecolect_2025\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(476): Illuminate\\Foundation\\Application->loadDeferredProviders()
+#3 C:\\Users\\DevJhoan\\Documents\\Code_2024\\Universidad\\EcoRecolect_2025\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(195): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#4 C:\\Users\\DevJhoan\\Documents\\Code_2024\\Universidad\\EcoRecolect_2025\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 C:\\Users\\DevJhoan\\Documents\\Code_2024\\Universidad\\EcoRecolect_2025\\artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#6 {main}
+"} 
