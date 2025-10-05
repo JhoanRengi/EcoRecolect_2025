@@ -1,0 +1,39 @@
+body {
+    font-family: "Figtree", sans-serif;
+}
+
+/* Sobrescribiendo el color para el texto */
+.text-success {
+    color: #00a63e !important; 
+}
+
+/* Sobrescribiendo el color para el fondo */
+.bg-success {
+    background-color: #00a63e !important;
+}
+
+/* Sobrescribiendo el color para el botón */
+.btn-success {
+    background-color: #00a63e;
+    border-color: #00a63e;
+}
+
+.footer-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    }
+
+.footer-link:hover {
+    text-decoration: underline;
+    color: #a1d3b3; /* #00a63e */
+}
