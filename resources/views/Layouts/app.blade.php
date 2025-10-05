@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>@yield('title') | EcoRecolect</title>
     <link rel="stylesheet" 
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,8 +17,8 @@
     {{-- Navbar --}}
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
+            <img src="{{ asset('img/logo.png') }}" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
             <a class="navbar-brand" href="/">EcoRecolect</a>
-            <img src="" alt="">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a href="/" class="nav-link">Inicio</a></li>
                 <li class="nav-item"><a href="/nosotros" class="nav-link">Nosotros</a></li>

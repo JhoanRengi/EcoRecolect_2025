@@ -1,4 +1,7 @@
 @extends('layouts.app')
+
+@section('title', 'Inicio')
+
 @section('content')
 
 <link rel="stylesheet" href="{{ asset('css/landing_page.css') }}">

@@ -1,4 +1,7 @@
 @extends('layouts.app') 
+
+@section('title', 'Planes y Precios')
+
 @section('content')
 
     {{-- 1. Título Principal --}}
@@ -184,5 +187,4 @@
             </div>
         </div>
     </section>
-
 @endsection
