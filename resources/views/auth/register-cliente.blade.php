@@ -7,10 +7,10 @@
         <img src="{{ asset('images/eco-hero.jpg') }}" alt="Eco Recolect"
              class="w-full h-80 sm:h-[28rem] lg:h-[36rem] object-cover">
         <div class="absolute top-4 left-4 flex items-center gap-2 bg-white/85 rounded-full px-3 py-1.5">
-          <img src="{{ asset('images/logo-ecorecolect.png') }}"
-               srcset="{{ asset('images/logo-ecorecolect.png') }} 1x,
-                       {{ asset('images/logo-ecorecolect@2x.png') }} 2x,
-                       {{ asset('images/logo-ecorecolect@3x.png') }} 3x"
+          <img src="{{ asset('images/logo.png') }}"
+               srcset="{{ asset('images/logo.png') }} 1x,
+                       {{ asset('images/logo.png') }} 2x,
+                       {{ asset('images/logo.png') }} 3x"
                alt="Eco Recolect" class="h-7 w-auto">
           <span class="font-semibold">Eco Recolect</span>
         </div>
