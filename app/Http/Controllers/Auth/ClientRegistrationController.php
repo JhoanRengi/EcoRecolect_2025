@@ -44,6 +44,8 @@ class ClientRegistrationController extends Controller
             'user_type' => 'cliente', // si dejaste esta columna
         ]);
 
+        return redirect()->route('login')
+                        ->with('status', '¡Registro completado! Por favor, inicia sesión con tu nueva cuenta.');
         
     }
 }

@@ -30,7 +30,9 @@
                                 @endforeach
                             </ul>
                         </div>
-                    @endif
+                    @endif                  
+
+                    <x-auth-session-status :status="session('status')" />
 
                     <form method="POST" action="{{ route('login') }}" class="space-y-6">
                         @csrf
