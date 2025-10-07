@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Http\Middleware;
 
 use Closure;
@@ -17,3 +16,4 @@ class EnsureUserIsAdmin
         return $next($request);
     }
 }
+

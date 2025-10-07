@@ -1,3 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ====== BASE opcional (sin afectar header) ====== */
+@layer base {
+  /* Usa en el contenedor del dashboard: <div class="dashboard-bg"> */
+  .dashboard-bg { @apply bg-surface; }
+}
+
+/* ====== COMPONENTES REUTILIZABLES ====== */
+@layer components {
+  /* Botón primario */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-brand px-4 py-2
+           text-white font-semibold shadow-soft border border-brand
+           transition hover:bg-brand-600;
+  }
+
+  /* Tarjeta/Panel */
+  .card { @apply bg-white border border-line rounded-xl2 shadow-soft; }
+  .panel { @apply card overflow-hidden; }
+
+  /* Stats */
+  .stat { @apply p-5; }
+  .stat-title { @apply text-muted text-sm; }
+  .stat-value { @apply text-3xl font-extrabold leading-none text-ink; }
+  .stat-hint { @apply text-muted text-xs mt-1; }
+
+  /* Tabs */
+  .tabs { @apply flex gap-6 border-b border-line; }
+  .tab { @apply py-3 text-muted font-semibold relative; }
+  .tab-active { @apply text-ink; }
+  .tab-active::after {
+    content: "";
+    @apply absolute left-0 right-0 -bottom-[1px] h-0.5 bg-brand rounded;
+  }
+
+  /* Pills (filtros) */
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-line bg-white
+           px-3 py-2 text-sm;
+  }
+
+  /* Tabla limpia */
+  .table-clean thead th {
+    @apply bg-slate-50 text-slate-500 uppercase text-xs tracking-wider text-left
+           py-3 px-4 border-b border-line;
+  }
+  .table-clean tbody td { @apply text-left py-3 px-4 border-t border-line; }
+  .empty { @apply text-muted text-center py-7; }
+}
+
+/* Enlaces del navbar */
+  .nav-link {
+    @apply px-3 py-2 text-muted rounded-md transition
+           hover:text-ink hover:bg-slate-100;
+  }
+  .nav-link-active {
+    @apply text-ink font-semibold relative;
+  }
+  .nav-link-active::after {
+    content: "";
+    @apply absolute left-2 right-2 -bottom-[6px] h-0.5 bg-brand rounded;
+  }
+
+  /* Botón/acción del nav (cerrar sesión / login) */
+  .nav-cta {
+    @apply rounded-full border border-line px-3 py-2 text-sm
+           text-ink hover:bg-slate-50 transition;
+  }
+  .nav-cta--primary { /* si quieres un CTA verde para 'Ingresar' */
+    @apply bg-brand border-brand text-white hover:bg-brand-600;
+  }
+

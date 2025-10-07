@@ -8,13 +8,29 @@
       use Illuminate\Support\Str;
     @endphp
 
-    {{-- Encabezado + CTA alineado a la derecha, como en el mock --}}
-    <div class="flex items-start justify-between">
-      <div>
-        <h1 class="text-xl sm:text-2xl font-extrabold text-ink">Mi Panel de Usuario</h1>
-        <p class="text-xs sm:text-sm text-muted">Gestiona tus recolecciones y consulta tu actividad</p>
+    {{-- Encabezado con bienvenida y accesos rápidos --}}
+    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+      <div class="space-y-2">
+        <div class="inline-flex items-center gap-3 rounded-2xl border border-line bg-white px-4 py-3 shadow-soft">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand/10 text-brand">👋</span>
+          <div class="flex items-center gap-2">
+            <div>
+              <p class="text-xs text-muted uppercase tracking-wide">Bienvenido/a</p>
+              <p class="text-sm font-semibold text-ink">{{ auth()->user()->name }}</p>
+            </div>
+            <a href="{{ route('profile.edit') }}"
+               class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-line text-muted hover:text-ink hover:border-ink transition"
+               title="Actualizar mi información">
+              👤
+            </a>
+          </div>
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-extrabold text-ink">Mi Panel de Usuario</h1>
+          <p class="text-xs sm:text-sm text-muted">Gestiona tus recolecciones y consulta tu actividad</p>
+        </div>
       </div>
-      <a href="{{ route('user.pickups.create') }}" class="btn-primary">
+      <a href="{{ route('user.pickups.create') }}" class="btn-primary self-start">
         <span class="-mt-0.5">+</span> Solicitar Recolección
       </a>
     </div>
@@ -65,8 +81,12 @@
             <p class="text-2xl font-extrabold text-ink">{{ number_format($metrics['completedToday']) }}</p>
             @if($metrics['nextWindow'])
               <p class="text-[11px] text-muted">
-                {{ $metrics['nextWindow']->isoFormat('MMM D') }} ·
-                {{ $metrics['nextWindow']->format('H:i') }}–{{ $metrics['nextWindowEnd']->format('H:i') }}
+                {{ $metrics['nextWindow']->isoFormat('MMM D') }}
+                @if(!empty($metrics['nextWindowEnd']))
+                  · {{ $metrics['nextWindow']->format('H:i') }}–{{ $metrics['nextWindowEnd']->format('H:i') }}
+                @else
+                  · {{ $metrics['nextWindow']->format('H:i') }}
+                @endif
               </p>
             @else
               <p class="text-[11px] text-muted">—</p>

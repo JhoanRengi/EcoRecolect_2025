@@ -44,6 +44,10 @@ class ClientRegistrationController extends Controller
             'user_type' => 'cliente', // si dejaste esta columna
         ]);
 
-        
+        Auth::login($user);
+
+        return redirect()
+            ->route('user.dashboard')
+            ->with('success', 'Tu cuenta fue creada correctamente. ¡Bienvenido a EcoRecolect!');
     }
 }
