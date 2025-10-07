@@ -18,26 +18,55 @@
         <div class="container">
             <img src="{{ asset('images/logo.png') }}" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
             <a class="navbar-brand" href="/">EcoRecolect</a>
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a href="/" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="/nosotros" class="nav-link">Nosotros</a></li>
-                <li class="nav-item"><a href="/planes" class="nav-link">Planes</a></li>
-                <li class="nav-item"><a href="/contacto" class="nav-link">Contacto</a></li>
-                 @auth
-          @if(auth()->user()->user_type === 'admin')
-            <li class="nav-item"><a href="{{ route('admin.dashboard') }}" class="nav-link">Admin</a></li>
-          @endif
-          <li class="nav-item">
-            <form method="POST" action="{{ route('logout') }}">
-              @csrf
-              <button class="btn btn-link nav-link p-0">Cerrar sesión</button>
-            </form>
-          </li>
-          @else
-          <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Iniciar sesión</a></li>
-          
-        @endauth
-            </ul>
+            <ul class="hidden md:flex items-center gap-1 ms-auto">
+  <li>
+    <a href="{{ url('/') }}"
+       class="nav-link {{ request()->is('/') ? 'nav-link-active' : '' }}">
+      Inicio
+    </a>
+  </li>
+  <li>
+    <a href="{{ url('/nosotros') }}"
+       class="nav-link {{ request()->is('nosotros') ? 'nav-link-active' : '' }}">
+      Nosotros
+    </a>
+  </li>
+  <li>
+    <a href="{{ url('/planes') }}"
+       class="nav-link {{ request()->is('planes') ? 'nav-link-active' : '' }}">
+      Planes
+    </a>
+  </li>
+  <li>
+    <a href="{{ url('/contacto') }}"
+       class="nav-link {{ request()->is('contacto') ? 'nav-link-active' : '' }}">
+      Contacto
+    </a>
+  </li>
+
+  @auth
+    @if(auth()->user()->user_type === 'admin')
+      <li>
+        <a href="{{ route('admin.dashboard') }}"
+           title="Ir al panel de administración"
+           class="nav-link {{ request()->is('admin*') ? 'nav-link-active' : '' }}">
+          Panel (Dashboard)
+        </a>
+      </li>
+    @endif
+
+    <li>
+      <form method="POST" action="{{ route('logout') }}" class="m-0">
+        @csrf
+        <button class="nav-cta" type="submit">Cerrar sesión</button>
+      </form>
+    </li>
+  @else
+    <li>
+      <a href="{{ route('login') }}" class="nav-cta nav-cta--primary">Ingresar</a>
+    </li>
+  @endauth
+</ul>
         </div>
     </nav>
 
